@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/air_style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Air Quality Prediction</h1>
+        <form action="{{url_for('predict')}}" method="post">
+            <p>SO2</p>
+            <input type="number" class="input" id="so2" step="0.01" name="so2" placeholder="so2(0-900)">
+
+            <p>NO2</p>
+            <input type="number" class="input" id="no2" step="0.01"  name="no2" placeholder="No2(0-850)">
+
+            <p>RSPM</p>
+            <input type="number" class="input" id="rspm" step="0.01" name="rspm" placeholder="RSMP(0-6000)">
+
+            <p>SPM</p>
+            <input type="number" class="input" id="spm" step="0.01" name="spm" placeholder="SMP(0-3000)">
+
+            <button class="btn">Predict</button>
+        </form>
+        {% if prediction is not none %}
+            <div class="result">
+                <h2>Predicted Value: {{ prediction }}</h2>
+                <h2>Air Quality: {{ prediction_range }}</h2>
+                
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

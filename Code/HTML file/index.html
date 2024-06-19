@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Water Quality Detection</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Water Quality Detection</h1>
+        <form id="predict-form" action="/predict" method="post">
+            
+            <input type="number" id="feature1" name="feature1" placeholder="Ph(0-14)" class="input" step="0.001">
+            <input type="number" id="feature2" name="feature2" class="input" placeholder="Hardness(50-300)" step="0.001">
+            <input type="number" id="feature3" name="feature3" class="input" placeholder="Solids(350-50K)" step="0.001">
+            <input type="number" id="feature4" name="feature4" class="input" placeholder="Chloramines(0-13)" step="0.001">
+            <input type="number" id="feature5" name="feature5" class="input" placeholder="Sulphate(150-450)" step="0.001">
+            <input type="number" id="feature6" name="feature6" class="input" placeholder="Conductivity(200-750)" step="0.001">
+            <input type="number" id="feature7" name="feature7" class="input" placeholder="Organic_Carbon(2-28)" step="0.001">
+            <input type="number" id="feature8" name="feature8" class="input" placeholder="Trihalomethanes(0-120)" step="0.001">
+            <input type="number" id="feature9" name="feature9" class="input" placeholder="Turbidity(1-6)" step="0.001">
+
+            <button type="submit" id="submit">Predict</button>
+        </form>
+        <h2 id="result">
+            
+            {% if prediction_text %}
+                {{ prediction_text }}
+            {% endif %}
+        </h2>
+    </div>
+    
+</body>
+</html>

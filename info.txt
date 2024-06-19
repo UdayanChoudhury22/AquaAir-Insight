@@ -1,0 +1,8 @@
+1.Year:2024
+2.Project name: AquaAir Insight
+3.Group Number: 9
+4.Student Details:
+a.Shreyansh Shekhar(10800220006)(Rg no: 201080100210078)
+b.Rishika Singh(10800220008)(Rg no: 201080100210076)
+c.Udayan Choudhury(10800220035)(Rg no: 201080100210049)
+d.Sumit kumar Mihirachraya(10800220042)(Rg. no: 201080100210042)

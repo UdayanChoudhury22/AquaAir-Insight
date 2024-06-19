@@ -1,0 +1,7 @@
+1.Numpy
+2.Pandas
+3.Sklearn
+4.Matplotlib
+5.Seaborn
+6.Joblib
+7.Flask
